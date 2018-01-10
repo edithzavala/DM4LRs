@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    
+    // https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable
+	compile group: 'nz.ac.waikato.cms.weka', name: 'weka-stable', version: '3.8.2'
+	
+	// spring-boot
+	compile("org.springframework.boot:spring-boot-starter-web")
+    
+    // JUnit test framework
+    testCompile("junit:junit")
+}
